@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About the Project</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">ABOUT</p>
+      <h1>About This Project</h1>
+      <nav><a href="/">Home</a><a href="/students">Registered Students</a><a href="/about">About</a></nav>
+    </header>
+    <section class="panel">
+      <p>This beginner project demonstrates a Python Flask web application with HTML templates, GET and POST routes, form validation, and a result page.</p>
+      <h2>Learning objectives</h2>
+      <ul>
+        <li>Create routes using Flask.</li>
+        <li>Receive form data with a POST request.</li>
+        <li>Validate input and show friendly messages.</li>
+        <li>Render HTML templates.</li>
+      </ul>
+      <p><strong>Note:</strong> This version stores records in memory only. The list is cleared when the server restarts. A database is not required by the assignment.</p>
+    </section>
+  </main>
+</body>
+</html>

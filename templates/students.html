@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registered Students</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">STUDENT LIST</p>
+      <h1>Registered Students</h1>
+      <nav><a href="/">Home</a><a href="/students">Registered Students</a><a href="/about">About</a></nav>
+    </header>
+    <section class="panel">
+      {% if students %}
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Name</th><th>Roll number</th><th>Course</th><th>Email</th></tr></thead>
+            <tbody>
+              {% for student in students %}
+                <tr><td>{{ student.name }}</td><td>{{ student.roll_number }}</td><td>{{ student.course }}</td><td>{{ student.email }}</td></tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% else %}
+        <p>No students have been registered in this running session yet.</p>
+      {% endif %}
+      <a class="button-link" href="/">Register a student</a>
+    </section>
+  </main>
+</body>
+</html>

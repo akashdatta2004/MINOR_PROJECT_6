@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Registration System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">FLASK MINI PROJECT</p>
+      <h1>Student Registration System</h1>
+      <p>Enter the details below to register a student.</p>
+      <nav><a href="/">Home</a><a href="/students">Registered Students</a><a href="/about">About</a></nav>
+    </header>
+
+    <section class="panel">
+      <h2>Registration Form</h2>
+      <form action="/register" method="POST">
+        <label for="name">Student name</label>
+        <input id="name" name="name" type="text" minlength="2" required placeholder="e.g. Rahul Das">
+
+        <label for="roll_number">Roll number</label>
+        <input id="roll_number" name="roll_number" type="text" required placeholder="e.g. CS101">
+
+        <label for="course">Course</label>
+        <input id="course" name="course" type="text" required placeholder="e.g. BCA">
+
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" required placeholder="e.g. student@example.com">
+
+        <button type="submit">Register Student</button>
+      </form>
+    </section>
+    <footer>Learning project built with Python and Flask.</footer>
+  </main>
+</body>
+</html>

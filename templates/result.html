@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">REGISTRATION RESULT</p>
+      <h1>Registration Status</h1>
+      <nav><a href="/">Home</a><a href="/students">Registered Students</a><a href="/about">About</a></nav>
+    </header>
+    <section class="panel">
+      {% if success %}
+        <div class="notice success">Student registered successfully!</div>
+        <h2>Registration Details</h2>
+        <dl>
+          <dt>Name</dt><dd>{{ student.name }}</dd>
+          <dt>Roll number</dt><dd>{{ student.roll_number }}</dd>
+          <dt>Course</dt><dd>{{ student.course }}</dd>
+          <dt>Email</dt><dd>{{ student.email }}</dd>
+        </dl>
+      {% else %}
+        <div class="notice error">Please correct the following errors:</div>
+        <ul class="errors">
+          {% for error in errors %}<li>{{ error }}</li>{% endfor %}
+        </ul>
+      {% endif %}
+      <a class="button-link" href="/">Back to registration</a>
+    </section>
+  </main>
+</body>
+</html>
