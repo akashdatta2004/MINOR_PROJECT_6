@@ -71,10 +71,3 @@ Open the local address printed in the terminal, usually `http://127.0.0.1:5000`.
 ## 8. Limitations
 This learning version uses an in-memory Python list rather than a database. Registrations are cleared when the application restarts. It is intended for local classroom demonstration, not production use.
 
-## 9. Screenshots
-After running the app, capture screenshots of:
-- Home / registration form
-- Successful registration result
-- Validation error result
-- Registered students page
-- About page
